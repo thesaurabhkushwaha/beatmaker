@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #f3eee3;
+}
+
+i, svg {
+    pointer-events: none;
+}
+
+.sequencer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.kick-pad, 
+.snare-pad, 
+.hihat-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.kick-track, 
+.snare-track, 
+.hihat-track{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin-top: 1rem;
+
+}
+
+.kick, 
+.snare, 
+.hihat{
+    display: flex;
+}
+
+.kick-pad{
+    background: rgb(142, 242, 251);
+}
+.snare-pad{
+    background: rgb(245, 195, 148);
+}
+.hihat-pad{
+    background: rgb(171, 241, 160);
+}
+
+.kick-pad.active{
+    border: 1rem solid rgb(0, 166, 255);
+}
+.snare-pad.active{
+    border: 1rem solid rgb(255, 123, 0);
+}
+.hihat-pad.active{
+    border: 1rem solid rgb(22, 168, 0);
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.controls button{
+    padding: 1rem;
+    border: none;
+    background: rgb(88, 88, 88);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.pad{
+    transition: all 0.5s ease;
+}
+
+.play{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    background: rgb(88, 88, 88);;
+}
+
+select{
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.mute.active {
+    background: white;
+    color: black;
+}
+
+.tempo{
+    margin: 3rem;
+    width: 40%;
+}
+
+.tempo p{
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.tempo-slider{
+    padding: 0.3rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background-color: rgb(100, 253, 253);
+    border-radius: 2rem;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes playTrack {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
